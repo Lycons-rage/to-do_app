@@ -1,5 +1,9 @@
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
+document.addEventListener('DOMContentLoaded', () => {
+    renderTasks(); 
+});
+
 function renderTasks() {
     const taskList = document.getElementById('taskList');
     taskList.innerHTML = '';
